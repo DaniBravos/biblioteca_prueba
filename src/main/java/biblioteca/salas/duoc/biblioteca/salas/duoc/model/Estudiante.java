@@ -22,6 +22,4 @@ public class Estudiante {
     @ManyToOne
     @JoinColumn(name = "codigo_carrera", nullable = false)
     private Carrera carrera;
-
-    // Getters and Setters
 }
