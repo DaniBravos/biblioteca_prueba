@@ -34,7 +34,7 @@ public class DataLoader implements CommandLineRunner {
 
         // Generar tipos de sala
         for (int i = 0; i < 3; i++) {
-            TipoSala tipoSala = new TipoSala();
+            TipoSala tipoSala = new TipoSala();            
             tipoSala.setIdTipo(i + 1);
             tipoSala.setNombre(faker.book().genre());
             tipoSalaRepository.save(tipoSala);

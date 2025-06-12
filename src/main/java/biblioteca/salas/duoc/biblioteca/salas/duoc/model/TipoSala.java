@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TipoSala {
-    @Id
+    @Id    
     private Integer idTipo;
     private String nombre;
 
