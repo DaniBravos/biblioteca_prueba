@@ -39,4 +39,17 @@ public class EstudianteServiceTest {
         assertEquals(1, estudiantes.size());
     }
 
+    @Test
+    public void testFindByCodigo(){
+        int id = 1;
+        Estudiante estudiante = new Estudiante(1,"1-9","nicolas","correo@correo.com",'D',22222,new Carrera());
+
+        when(estudianteRepository.findById(id)).thenReturn(Optional.of(estudiante));
+
+        Estudiante found = estudianteService.findById(id);
+
+        assertNotNull(found);
+        assertEquals(id,found.getId());
+    }
+
 }
