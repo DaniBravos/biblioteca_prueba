@@ -33,6 +33,10 @@ public class EstudianteServiceTest {
         
         when(estudianteRepository.findAll()).thenReturn(List.of(new Estudiante(1,"1-9","nicolas","correo@correo.com",'D',22222,new Carrera())));
 
+        List<Estudiante> estudiantes = estudianteService.findAll();
+
+        assertNotNull(estudiantes);
+        assertEquals(1, estudiantes.size());
     }
 
 }
