@@ -3,24 +3,26 @@ package biblioteca.salas.duoc.biblioteca.salas.duoc;
 import static org.mockito.Mockito.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 import biblioteca.salas.duoc.biblioteca.salas.duoc.model.TipoSala;
 import biblioteca.salas.duoc.biblioteca.salas.duoc.repository.TipoSalaRepository;
 import biblioteca.salas.duoc.biblioteca.salas.duoc.service.TipoSalaService;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.util.List;
 import java.util.Optional;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 public class TipoSalaServiceTest {
 
-    @Autowired
+    @InjectMocks
     private TipoSalaService tipoSalaService;
 
-    @MockBean
+    @Mock
     private TipoSalaRepository tipoSalaRepository;
 
     @Test
