@@ -52,4 +52,14 @@ public class EstudianteServiceTest {
         assertEquals(id,found.getId());
     }
 
+    @Test
+    public void testSave(){
+        Estudiante estudiante = new Estudiante(1,"1-9","nicolas","correo@correo.com",'D',22222,new Carrera());
+        when(estudianteRepository.save(estudiante)).thenReturn(estudiante);
+
+        Estudiante saved = estudianteService.save(estudiante);
+        assertNotNull(saved);
+        assertEquals(1, saved.getNombres());
+    }
+
 }
