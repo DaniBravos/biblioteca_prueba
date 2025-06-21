@@ -13,7 +13,7 @@ public class SwaggerConfig {
         return new OpenAPI()
             .info(new Info()
                     .title("API 2025 Reservas de salas")
-                    .version("1.0")
+                    .version("2.1.0")
                     .description("Documentacion de la api para el sistema de reservas de salas."));
     }
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
@@ -25,6 +26,9 @@ public class CarreraController {
         return carreraService.findAll();
     }
 
+    @Operation(summary = "Obtener carrera por id",description = "Obtiene una carrera segun su id")
+    @ApiResponse(responseCode = "200", description = "Operación exitosa")
+    @Parameter(description = "Codigo de la carrera",required = true)
     @GetMapping("/{codigo}")
     public Carrera getCarreraByCodigo(@PathVariable String codigo) {
         return carreraService.findByCodigo(codigo);
