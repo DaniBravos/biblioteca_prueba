@@ -5,6 +5,10 @@ import biblioteca.salas.duoc.biblioteca.salas.duoc.service.SalaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
+
 import java.util.List;
 
 @RestController
