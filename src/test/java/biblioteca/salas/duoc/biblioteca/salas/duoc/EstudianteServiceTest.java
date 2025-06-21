@@ -59,7 +59,7 @@ public class EstudianteServiceTest {
 
         Estudiante saved = estudianteService.save(estudiante);
         assertNotNull(saved);
-        assertEquals(1, saved.getNombres());
+        assertEquals("nicolas", saved.getNombres());
     }
 
 }
